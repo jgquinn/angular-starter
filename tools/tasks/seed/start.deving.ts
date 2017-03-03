@@ -37,7 +37,7 @@ function watchAppFiles(path: string, fileChangeCallback: (e: any, done: () => vo
 
 gulp.task('watch.while_deving', function () {
   watchAppFiles('**/!(*.ts)', (e: any, done: any) =>
-    runSequence('build.assets.dev', 'build.html_css', 'build.index.dev', () => { notifyLiveReload(e); done(); }));
+    runSequence('build.assets.dev', 'build.pug', 'build.html_css', 'build.index.dev', () => { notifyLiveReload(e); done(); }));
   watchAppFiles('**/(*.ts)', (e: any, done: any) =>
     runSequence('build.js.dev', 'build.index.dev', () => {
       notifyLiveReload(e);
