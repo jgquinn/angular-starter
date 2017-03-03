@@ -1,6 +1,8 @@
 h2 Sample App
 p (with Jade support)
 div
-    p Tap the button
+    div.alert.alert-info( role="alert" )
+        span.glyphicon.glyphicon-star( aria-hidden="true" )
+        | Tap the button
     button( (click)="updateCounter()" ) TAP
     p {{ message }}
